@@ -1,0 +1,16 @@
+thead{
+    background-color: gray;
+    color: white;
+}
+
+tbody{
+    background-color : snow;
+    color: black;
+}
+span.tab-space {
+    padding-left: 1em;
+}
+
+.state-title {
+    font-family: monospace;
+}

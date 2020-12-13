@@ -1,0 +1,35 @@
+<div class="container pt-3">
+  <button class="btn btn-primary" routerLink="">Home</button>
+</div>
+<div class="container pt-3">
+  <h2><strong class="state-title">{{state}} : </strong></h2>
+</div>
+<div class="container pt-3">
+ <span style="font-family: monospace; font-size: large;">Total cases -</span> 
+ <span style="color:red;"><strong>cnf : {{confirmed}} </strong></span>
+ <span class="tab-space" style="color: blue;"><strong>act : {{active}}</strong></span>
+ <span class="tab-space" style="color: green;"><strong>rec : {{recovered}}</strong></span>
+ <span class="tab-space" style="color: black;"><strong>deac : {{deceased}}</strong></span>
+</div>
+<div class="container pt-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>District</th>
+        <th>Active Cases</th>
+        <th>Confirmed</th>
+        <th>Deceased</th>
+        <th>Recovered</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of covidReport | keyvalue;">
+          <td style="background: cyan;"><strong>{{data.key}}</strong></td>
+          <td>{{data.value.active}}</td>
+          <td>{{data.value.confirmed}}</td>
+          <td>{{data.value.deceased}}</td>
+          <td>{{data.value.recovered}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
